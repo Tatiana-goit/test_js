@@ -4,7 +4,7 @@ function calculateTeamFinanceReport(salaries, team) {
 Object.keys(salaries).map((special) =>  {
     let countOneSpecial = team.filter((e) => e.specialization === special).length;
     let tax = parseInt(salaries[special].tax);
-    let resultOfOneSpecial = Math.floor(salaries[special].salary + salaries[special].salary * tax/(100 - tax)) * countOneSpecial;
+    let resultOfOneSpecial = Math.ceil(salaries[special].salary + salaries[special].salary * tax/(100 - tax)) * countOneSpecial;
     salaryResult['totalBudget' + special] = resultOfOneSpecial;
     salaryResult.totalBudgetTeam += resultOfOneSpecial;
   })  
