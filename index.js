@@ -11,7 +11,6 @@ Object.keys(salaries).map((special) =>  {
     return salaryResult
 }
 
-
 const salaries = {
     Progger: { salary: 1000, tax: '15%' },
     Tester: { salary: 1000, tax: '10%' },}  
